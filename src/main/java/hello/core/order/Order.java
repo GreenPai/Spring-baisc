@@ -14,6 +14,11 @@ public class Order {
         this.discountPrice = discountPrice;
     }
 
+    /**
+     * 비즈니스 계산 로직
+     * 기존 가격 - 할인 금액
+     * @return
+     */
     public int calculatePrice(){
         return itemPrice - discountPrice;
     }

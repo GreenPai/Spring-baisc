@@ -28,6 +28,8 @@ public class OrderServiceImpl implements OrderService{
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
         Member member = memberRepository.findById(memberId);
+        // 할인에 대한 정책을 discountPolicy에 시킴으로서
+        // 단일책임의 원칙을 잘 설계한 것이다. SRP
         int discountPrice = discountPolicy.discount(member, itemPrice);
 
         return new Order(memberId, itemName, itemPrice, discountPrice);
@@ -37,4 +39,5 @@ public class OrderServiceImpl implements OrderService{
     public MemberRepository getMemberRepository(){
         return memberRepository;
     }
+
 }

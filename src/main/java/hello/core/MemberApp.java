@@ -4,6 +4,13 @@ import hello.core.member.Member;
 import hello.core.member.MemberService;
 import hello.core.order.AppConfig;
 
+/**
+ *
+ * 테스트를 하기 위한 Class
+ * 효율성이 떨어지므로 JUnit를 사용 (테스트 코드)
+ * test/member/MemberServiceTest
+ */
+
 public class MemberApp {
     public static void main(String[] args) {
         AppConfig appConfig = new AppConfig();
