@@ -9,6 +9,11 @@ import hello.core.member.MemoryMemberRepository;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * 기존 방식에서는 추상화 + 구체화로서 OCP, DIP를 지킬 수 없었다.
+ * AppConfig를 사용하여 외부에서 선언해줍으로서 연결을 더욱 자연스럽게 해준다.
+ *
+ */
 @Configuration
 public class AppConfig {
 

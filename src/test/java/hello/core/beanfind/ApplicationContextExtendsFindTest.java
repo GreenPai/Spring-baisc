@@ -48,6 +48,8 @@ class ApplicationContextExtendsFindTest {
                     beansOfType.get(key));
         }
     }
+
+    // 스프링에 있는 모든 빈까지 다 나옴
     @Test
     @DisplayName("부모 타입으로 모두 조회하기 - Object")
     void findAllBeanByObjectType() {

@@ -18,6 +18,8 @@ class ApplicationContextBasicFindTest {
                 MemberService.class);
         assertThat(memberService).isInstanceOf(MemberServiceImpl.class);
     }
+
+    // 동일한 타입 2개 시 오류 발생 -> 이름으로 지정
     @Test
     @DisplayName("이름 없이 타입만으로 조회")
     void findBeanByType() {

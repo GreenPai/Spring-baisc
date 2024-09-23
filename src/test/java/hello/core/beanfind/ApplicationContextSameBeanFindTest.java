@@ -40,6 +40,8 @@ class ApplicationContextSameBeanFindTest {
         System.out.println("beansOfType = " + beansOfType);
         assertThat(beansOfType.size()).isEqualTo(2);
     }
+
+    // static은 여기 안에서만 사용하겠다는 의미이다.
     @Configuration
     static class SameBeanConfig {
         @Bean
