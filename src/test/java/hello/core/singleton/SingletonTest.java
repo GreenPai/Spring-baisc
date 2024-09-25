@@ -8,6 +8,11 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 
 import static org.assertj.core.api.Assertions.*;
 public class SingletonTest {
+
+    /**
+     * 싱글톤이 적용되지 않았을 때
+     * Service1, Service2 요청 할 때 마다 새로운 객체를 생성한다.
+     */
     @Test
     @DisplayName("스프링 없는 순수한 DI 컨테이너")
     void pureContainer() {
